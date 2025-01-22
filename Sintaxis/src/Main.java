@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+//IMPORTACIONES
+
+//Clase Principal
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hola, Maria Palma!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Metodo main
+        /* Soy
+        un comentario
+        de
+        varias lineas */
+        System.out.println("Hola, Maria Palma!");
+        String cadenas = "maria" + "palma" + "torres";
+
+        System.out.println(cadenas);
+
+        System.out.println(cadenas.length());
+
+        System.out.println(cadenas.substring(2,5));
+        System.out.println(cadenas.substring(beginindex:2));
+        System.out.println(cadenas.substring(0,5));
         }
     }
 }
