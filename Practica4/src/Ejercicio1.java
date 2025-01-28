@@ -7,7 +7,7 @@ public class Ejercicio1 {
         System.out.print("Ingresar  contrasena: ");
         String contrasena = scn.nextLine();
 
-        if (contrasena.equalsIgnoreCase(password)) {
+        if (contrasena.equals(password)) {
             System.out.println("Contrasena es correcta.");
         } else {
             System.out.println("Contrasena es incorrecta.");
