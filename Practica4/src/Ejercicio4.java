@@ -5,20 +5,13 @@ public class Ejercicio4 {
         Scanner scn = new Scanner(System.in);
         System.out.print("Ingresar una palabra: ");
         String c = scn.nextLine();
+        String ci = new StringBuilder(c).reverse().toString();
 
-        c = c.replaceAll("\\s+", "").toLowerCase();
-        int l = c.length();
-        boolean ep = true;
-        for (int i = 0; i < l / 2; i++) {
-            if (c.charAt(i) != c.charAt(l - i - 1)) {
-                ep = false;
-                break;
-            }
-        }
-        if (ep) {
-            System.out.println("Es palindromo.");
+        if (c.equalsIgnoreCase(ci)) {
+            System.out.println("La palabra es un palindromo.");
         } else {
-            System.out.println("No es palindromo.");
+            System.out.println("La palabra no es un palindromo.");
         }
+        scn.close();
     }
 }
