@@ -1,15 +1,32 @@
 import javax.swing.*;
-public class Cuenta {
-    int nCuenta;
-    String titular;
-    float saldo;
 
+public class Cuenta {
+    private int nCuenta;
+    private String titular;
+    private float saldo;
+
+    // Constructor
     public Cuenta(int nCuenta, String titular, float saldo) {
         this.nCuenta = nCuenta;
         this.titular = titular;
         this.saldo = saldo;
     }
-    public void iEfectivo(float cantidad) {
+
+    // Métodos Getter y Setter
+    public int getNCuenta() {
+        return nCuenta;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    // Métodos de operación
+    public void ingresarEfectivo(float cantidad) {
         if (cantidad > 0) {
             saldo += cantidad;
         } else {
@@ -17,7 +34,7 @@ public class Cuenta {
         }
     }
 
-    public boolean rEfectivo(float cantidad) {
+    public boolean retirarEfectivo(float cantidad) {
         if (cantidad > 0 && cantidad <= saldo) {
             saldo -= cantidad;
             return true;
@@ -26,9 +43,9 @@ public class Cuenta {
         return false;
     }
 
-    public boolean trans(Cuenta destino, float cantidad) {
-        if (cantidad > 0 && rEfectivo(cantidad)) {
-            destino.iEfectivo(cantidad);
+    public boolean transferir(Cuenta destino, float cantidad) {
+        if (cantidad > 0 && retirarEfectivo(cantidad)) {
+            destino.ingresarEfectivo(cantidad);
             return true;
         }
         JOptionPane.showMessageDialog(null, "Transferencia no valida.");
