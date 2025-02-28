@@ -23,5 +23,5 @@ public class Vehiculo {
             JOptionPane.showMessageDialog(null, "El conductor ya fue asignado, verificar informacion.");
         }
     }
-}
+}//
 

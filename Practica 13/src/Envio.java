@@ -23,4 +23,4 @@ public class Envio {
         String pesoStr = JOptionPane.showInputDialog("Ingresar peso del envio:");
         return (pesoStr.isEmpty()) ? new Envio(codigo, destino) : new Envio(codigo, destino, Double.parseDouble(pesoStr));
     }
-}
+}//
